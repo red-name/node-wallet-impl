@@ -8,7 +8,7 @@ HD Wallet.
 Extended Public and Private key needed. Exodus wallet does not currently support viewing your extended private key(xprv)
 
 Extended Keys are used to generate children addresses. This wallet is programmed to search your children addresses for
-funds for spending purposes.
+funds. All change is returned to the first child address.
 
 
 ```js
