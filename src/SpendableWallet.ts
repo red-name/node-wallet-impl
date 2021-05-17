@@ -43,7 +43,7 @@ export default class SpendableWallet {
         satoshis: parseInt(utxo.value),
         txId: utxo.txid,
         scriptPubKey: utxo.scriptPubKey,
-        address: utxo.scriptPubKey || address,
+        address: address,
         outputIndex: utxo.vout,
         script: null,
       });
