@@ -3,13 +3,7 @@ import { ok } from "assert";
 import litecore from "litecore-lib";
 
 import SpendableWallet from "./SpendableWallet";
-import validateAddress from "../Validator";
-
-/**
- * Old insight api
- * "livenet" -> "https://insight.litecore.io"
- * "testnet" -> "https://testnet.litecore.io"
- */
+import validateAddress from "./Validator";
 
 var HDPublicKey = litecore.HDPublicKey;
 var HDPrivateKey = litecore.HDPrivateKey;
