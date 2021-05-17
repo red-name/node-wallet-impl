@@ -76,13 +76,13 @@ Wallet
 
 ## About bitcore-explorers
 
-Bitcore-explorers is now a defunct library. The Insights server managed by Bitpay is no longer usable. I recommend switching over to [NOWNodes.IO](https://nownodes.io) for your blockchain api.
+Bitcore-explorers is now a defunct library. The Insights server, managed by Bitpay, is no longer usable. I recommend switching over to [NOWNodes.io](https://nownodes.io) for your blockchain api.
 
 ## About Monerolib
 
-monerolib is not currently finished, therefore the Monero wallet is haulted until then.
+monerolib is not currently finished. Therefore, the Monero wallet is haulted until then.
 
 ## Contrubiting
 
-Feel free to open PRs and issues. If are you unsure of anything, just ask :)
+Feel free to open PRs and issues. If are you unsure of anything, don't hesitate to ask.
 
