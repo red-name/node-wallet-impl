@@ -5,6 +5,6 @@ var Validator = require("multicoin-address-validator");
  *
  * Based on the npm package: 'multicoin-address-validator'
  */
-export default function validateAddress(address: string, crypto: string) {
+export default function validateAddress(address: string, crypto: string): boolean {
   return Validator.validate(address, crypto);
 }
