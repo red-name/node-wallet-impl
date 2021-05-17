@@ -3,7 +3,7 @@ import { ok } from "assert";
 delete (global as any)._bitcore;
 var bitcore = require("bitcore-lib-cash");
 
-import validateAddress from "../Validator";
+import validateAddress from "./Validator";
 import SpendableWallet from "./SpendableWallet";
 var HDPublicKey = bitcore.HDPublicKey;
 var HDPrivateKey = bitcore.HDPrivateKey;
