@@ -205,7 +205,7 @@ export default class BitcoinHDWallet extends SpendableWallet {
       .sign(keys)
       .serialize();
 
-    console.log(bitcore_transaction);
+    //console.log(bitcore_transaction);
 
     // broadcast the transaction to the blockchain
     return await this.broadcast(bitcore_transaction);
