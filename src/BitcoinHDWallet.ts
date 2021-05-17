@@ -9,7 +9,7 @@ var PrivateKey = bitcore.PrivateKey;
 var Address = bitcore.Address;
 var Networks = bitcore.Networks;
 
-import validateAddress from "../Validator";
+import validateAddress from "./Validator";
 import SpendableWallet from "./SpendableWallet";
 
 /**
