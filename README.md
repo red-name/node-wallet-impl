@@ -1,9 +1,15 @@
 # node-wallet-impl
-My Javascript implemtation on BTC, BCH, ETH, LTC, and XMR wallets.
+My Javascript implemtation on BTC, BCH, ETH, LTC, and XMR wallets. These wallets are designed only to spend funds. You must source your own blockchain API, such as fetching utxos/broadcasting txs.
 
 ## Bitcoin
 
-HD Wallet
+HD Wallet.
+Extended Public and Private key needed. Exodus wallet does not currently support viewing your extended private key(xprv)
+
+Extended Keys are used to generate children addresses. This wallet is programmed to search your children addresses for
+funds for spending purposes.
+
+
 ```js
 var wallet = new BitcoinHDWallet("xpub", "xprv");
 
@@ -29,7 +35,7 @@ console.log("https://blockchair.com/bitcoin-cash/transaction/" + txid);
 
 ## Ethereum
 
-Wallet
+Wallet. Private key needed.
 ```js
 var wallet = new EthereumWallet("address", "privateKey");
 
@@ -37,7 +43,7 @@ var wallet = new EthereumWallet("address", "privateKey");
 var txid = await wallet.send("recipientAddress", 0.012, 0.003);
 
 // view your transaction on the mainnet
-console.log("https://blockchair.com/ethereum/transaction/" + txid);
+console.log("https://etherscan.io/tx/" + txid);
 ```
 
 ## Litecoin
