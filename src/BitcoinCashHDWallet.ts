@@ -32,7 +32,7 @@ export default class BitcoinCashHDWallet extends SpendableWallet {
     ok(this.extendedPrivateKey, "Extended Private key required (xprv)");
 
     ok(
-      validateAddress(this.getChildAddress(0), "btc"),
+      validateAddress(this.getChildAddress(0), "bch"),
       "must be valid child address"
     );
 
