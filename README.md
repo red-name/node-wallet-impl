@@ -74,6 +74,7 @@ Wallet
 | [litecore-lib](https://www.npmjs.com/package/litecore-lib)     | Creating and signing litecoin txs             | LTC           |
 | [ethereumjs-tx](https://www.npmjs.com/package/ethereumjs-tx) | Creating and signing ethereum txs | ETH |
 | [monerolib](https://www.npmjs.com/package/monerolib)        | Creating and signing Monero txs               | XMR           |
+| [multicoin-address-validator](https://www.npmjs.com/package/multicoin-address-validator) | Validates generated addresses | All |
 
 ## About bitcore-explorers
 
