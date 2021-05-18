@@ -31,7 +31,7 @@ export default class LitecoinHDWallet extends SpendableWallet {
     ok(this.extendedPrivateKey, "Extended Private key required (xprv)");
 
     ok(
-      validateAddress(this.getChildAddress(0), "btc"),
+      validateAddress(this.getChildAddress(0), "ltc"),
       "must be valid child address"
     );
 
