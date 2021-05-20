@@ -78,6 +78,27 @@ export default class LitecoinHDWallet extends SpendableWallet {
   }
 
   /**
+   * Returns the WIF string. This is the private key displayed in your wallet's GUI, like exodus.
+   *
+   * - `getChildPrivateKey` returns hex-encoded string, used for signing
+   * - `getChildPrivateKeyWIF` returns WIF string, used for comparing with your wallet software
+   *
+   * @param index
+   * @returns
+   */
+  getChildPrivateKeyWIF(index: number): string {
+    ok(typeof index === "number", "index must be number");
+    ok(Math.floor(index) === index, "index must be an integer");
+    ok(index >= 0, "index must be positive");
+
+    var hdPrivateKey = new HDPrivateKey(this.extendedPrivateKey);
+
+    var derived = hdPrivateKey.derive(0).derive(index);
+
+    return derived.privateKey.toWIF();
+  }
+
+  /**
    * Creates and broadcasts a transaction to the Bitcoin Cash Mainnet.
    * @param address - Receiving address
    * @param amount - In satoshis
