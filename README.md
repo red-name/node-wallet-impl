@@ -84,6 +84,16 @@ Bitcore-explorers is now a defunct library. The Insights server, managed by Bitp
 
 monerolib is not currently finished. Therefore, the Monero wallet is haulted until then.
 
+## Getting xprvs from Exodus
+
+Exodus Wallet has no method to view your xprvs (extended private keys)
+You need to use a website like this: https://iancoleman.io/bip39/ (google "bip39 online" for alternatives)
+
+1. Enter your secret phrase in BIP39 Mnemonic textbox (make sure you audit the source first!!)
+2. xprv is in the Account Extended Private Key textbox
+
+For Bitcoin Cash and Litecoin, scroll back up to Coin and select BCH or LTC. Also uncheck the Uncheck Prefixes, so it's in 'xprv...' form.
+
 ## Contrubiting
 
 Feel free to open PRs and issues. If are you unsure of anything, don't hesitate to ask.
