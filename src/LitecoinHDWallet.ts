@@ -1,6 +1,6 @@
 import { ok } from "assert";
 
-import litecore from "litecore-lib";
+import litecore from "litecore-lib-v5";
 
 import SpendableWallet from "./SpendableWallet";
 import validateAddress from "./Validator";
@@ -17,8 +17,8 @@ var PrivateKey = litecore.PrivateKey;
  * Spend funds from children addresses via your xpub and xpriv.
  *
  * Exodus is a HD wallet for Litecoin.
- * Gear Icon -> Export XPub
- * Gear Icon -> View Private Keys
+ * Tripe Dots Icon -> Export XPub
+ * For getting xprv, check the ReadMe for this repo.
  */
 export default class LitecoinHDWallet extends SpendableWallet {
   constructor(
@@ -35,10 +35,14 @@ export default class LitecoinHDWallet extends SpendableWallet {
       "must be valid child address"
     );
 
+    var privateKey = new PrivateKey(
+      this.getChildPrivateKeyWIF(0),
+      Networks.livenet
+    );
+
     // Verify this xpub and xpriv are related
     ok(
-      new PrivateKey(this.getChildPrivateKey(0)).toAddress() ==
-        this.getChildAddress(0),
+      privateKey.toAddress().toString() === this.getChildAddress(0),
       "private key must control public key"
     );
   }
